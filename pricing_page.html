@@ -29,7 +29,17 @@
         .pricing-content .pricing-item .fonctionnalities .item .content { width: 85%;  }
         .pricing-content .pricing-item .fonctionnalities .item svg { width: 25px; height: 25px; fill: blue; margin-right: 15px; }
 
+        @media screen and (max-width: 991px) {
+            
+            section { height: auto; }
+            .pricing-content { flex-direction: column; flex-wrap: wrap; gap: 50px; padding: 3rem 0; }
+            .pricing-content .pricing-item { width: 50%; }
+        }
 
+        @media screen and (max-width: 768px) {
+            .pricing-content { height: auto;}
+            .pricing-content .pricing-item { width: 80%; }
+        }
     </style>
 </head>
 

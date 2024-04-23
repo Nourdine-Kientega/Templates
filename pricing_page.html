@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing page</title>
+
+    <style>
+        *,::after,::before { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; list-style: none; }
+        body { background: #f1f1f1; }
+         section { width: 100%; display: flex; height: 100vh; align-items: center; justify-content: center; }
+        .pricing { width: 100%; }
+        .pricing span { color: #000; }
+        .pricing-content { width: 100%; display: flex; align-items: center; justify-content: center; gap: 2rem; margin: 4rem 0; color: #000; }
+        .pricing-content .pricing-item { width: 280px; border: 1px solid #303030; box-shadow: 0 0 20px rgba(0, 0, 0, .5); background: #fff; font-size: 13px; border-radius: 10px; transition: all .5s ease; }
+        .pricing-content .pricing-item:hover { transform: scale(1, 1.08); border: 3.5px solid blue; }
+        .pricing-content .pricing-item :where(.head,.fonctionnalities) { padding: 20px; display: flex; flex-direction: column; gap: 1.5rem; background: inherit; color: inherit; border-radius: 10px; }
+        .pricing-content .pricing-item .head { align-items: center; }
+        .pricing-content .pricing-item .option { font-weight: 600; font-size: 16px; }
+        .pricing-content .pricing-item .during { display: flex; gap: 5px; }
+        .pricing-content .pricing-item .during .price h1 { font-weight: bold; font-size: 32px; margin: 0; }
+        .pricing-content .pricing-item .during .time { align-self: flex-end; margin-bottom: 5px; }
+        .pricing-content .pricing-item .choice { margin-top: 15px; }
+        .pricing-content .pricing-item .choice a { font-size: 12px; color: #fff; padding: 10px 20px; border-radius: 6px; background: blue; }
+        .pricing-content .pricing-item .description { width: 100%; line-height: 1.5rem; margin-top: 15px; }
+        .pricing-content .pricing-item .foot { width: 100%; border-top: 1px solid #303030; }
+        .pricing-content .pricing-item .fonctionnalities .item { display: flex; gap: 5px; justify-content: space-between; align-items: flex-start; }
+        .pricing-content .pricing-item .fonctionnalities .item .icon { width: 15%; }
+        .pricing-content .pricing-item .fonctionnalities .item .content { width: 85%;  }
+        .pricing-content .pricing-item .fonctionnalities .item svg { width: 25px; height: 25px; fill: blue; margin-right: 15px; }
+
+
+    </style>
+</head>
+
+<body>
+    
+    <section class="pricing">
+        <div class="pricing-content">
+            <div class="pricing-item">
+                <div class="head">
+                    <div class="option">basique</div>
+                    <div class="during">
+                        <div class="price"><h1>$ 20.99 </h1></div>
+                        <div class="time"><small>/month</small></div>
+                    </div>
+                    <div class="choice">
+                        <a href="/pricing/basic">Choisir cet abonnement</a>
+                    </div>
+                    <div class="description">Lorem ipsum dolor siure mollitia commodi minus necessitatibus deserunt odio libero saepe.</div>    
+                </div>
+                <div class="foot">
+                    <div class="fonctionnalities">
+                        <div class="item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path></svg>
+                            </div>
+                            <div class="content">
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path></svg>
+                            </div>
+                            <div class="content">
+                                <span>Lorem ipsum dolor sit Lorem ipsum, dolor sit amet consectetur Lorem ipsum dolor sit amet. adipisicing elit. Molestias, tenetur?</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path></svg>
+                            </div>
+                            <div class="content">
+                                <span>Lorem ipsum dolor sit Lorem ipsum, olestias, tenetur?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-item">
+                <div class="head">
+                    <div class="option">Standard</div>
+                    <div class="during">
+                        <div class="price"><h1>$ 70 </h1></div>
+                        <div class="time"><small>/month</small></div>
+                    </div>
+                    <div class="choice">
+                        <a href="/pricing/standard">Choisir cet abonnement</a>
+                    </div>
+                    <div class="description">Lorem ipsum dolor siure mollitia commodi minus necessitatibus deserunt odio libero saepe.</div>    
+                </div>
+                <div class="foot">
+                    <div class="fonctionnalities">
+                        <div class="item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path></svg>
+                            </div>
+                            <div class="content">
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path></svg>
+                            </div>
+                            <div class="content">
+                                <span>Lorem ipsum dolor sit Lorem ipsum, dolor sit amet consectetur Lorem ipsum dolor sit amet. adipisicing elit. Molestias, tenetur?</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path></svg>
+                            </div>
+                            <div class="content">
+                                <span>Lorem ipsum dolor sit Lorem ipsum, olestias, tenetur?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-item">
+                <div class="head">
+                    <div class="option">Proffessionnel</div>
+                    <div class="during">
+                        <div class="price"><h1>$ 100 </h1></div>
+                        <div class="time"><small>/month</small></div>
+                    </div>
+                    <div class="choice">
+                        <a href="/pricing/pro">Choisir cet abonnement</a>
+                    </div>
+                    <div class="description">Lorem ipsum dolor siure mollitia commodi minus necessitatibus deserunt odio libero saepe.</div>    
+                </div>
+                <div class="foot">
+                    <div class="fonctionnalities">
+                        <div class="item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path></svg>
+                            </div>
+                            <div class="content">
+                                <span>Lorem ipsum dolor sit amet.</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path></svg>
+                            </div>
+                            <div class="content">
+                                <span>Lorem ipsum dolor sit Lorem ipsum, dolor sit amet consectetur Lorem ipsum dolor sit amet. adipisicing elit. Molestias, tenetur?</span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11.0026 16L6.75999 11.7574L8.17421 10.3431L11.0026 13.1716L16.6595 7.51472L18.0737 8.92893L11.0026 16Z"></path></svg>
+                            </div>
+                            <div class="content">
+                                <span>Lorem ipsum dolor sit Lorem ipsum, olestias, tenetur?</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Section -->
+
+</body>
+</html>

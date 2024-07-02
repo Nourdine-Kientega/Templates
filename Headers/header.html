@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; color: inherit; }
+        a, a:hover, a:focus { text-decoration: none;  color: inherit; }
+
+        /***************** Header style ****************/
+        header { display: flex; background: #a0a0a0; align-items: center; justify-content: space-between; padding: 20px; margin: 10px auto; font-size: 18px; position: relative; }
+        header .logo { width: 55%; display: flex; align-items: center; gap: 25px; }
+        header .logo img { width: 40px; height: 40px; }
+        header .navbar ul { display: flex; align-items: center; gap: 20px; list-style: none; }
+        header .navbar ul li a:Hover { color: blue; }
+        header .menu { width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; position: relative; display: none; margin-right: 10px; }
+        header .menu svg { width: 25px; height: 25px; position: absolute; }
+        header .menu svg.close { display: none; }
+        header .menu.active svg.close { display: block; }
+        header .menu.active svg.open { display: none; }
+
+        /***************** Breakpoint style ****************/
+        @media screen and (max-width: 768px) {
+            header { width: 100%; padding-left: 50px; }
+            header .logo { width: 80%; }
+            header .navbar { position: absolute; left: 0; right: 0; top: 100%; justify-content: center; background: #e6e6e6; border-top: .1px solid rgba(0, 0, 0, .5); box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2); display: none; z-index: 10001; }
+            header .navbar.active { display: block; }
+            header .menu { display: block; } 
+            header .navbar ul { flex-direction: column;  padding: 20px; } 
+            header .logo { font-size: .9rem; }
+        }
+    </style><!-- Style -->
+
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="/" class="logo-img"><img src="/img/logo.png" alt="logo"></a>
+            <a href="/">Titre suivant le logo</a>
+        </div>
+        <nav class="navbar" id="nav-bar">
+            <ul>
+                <li>
+                    <a href="#" class="active text-none">Accueil</a>
+                </li>
+                <li>
+                    <a href="#">Mes dossiers</a>
+                </li>
+                <li>
+                    <a href="#">Contacter</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu" id="menu">
+            <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+            <svg class="open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
+        </div>
+    </header><!-- header -->
+
+
+    <script>
+        // Selection des balises du DOM
+        const menu = document.getElementById('menu');
+        const navbar = document.getElementById('nav-bar');
+
+        menu.addEventListener('click', () => {
+
+            menu.classList.toggle('active');
+            navbar.classList.toggle('active');
+        });
+    </script><!-- Script -->
+</body>
+</html>
